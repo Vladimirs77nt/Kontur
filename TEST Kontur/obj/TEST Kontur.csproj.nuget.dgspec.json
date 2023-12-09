@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\УЧЕБА\\Разработчик Основной блок\\4 Знакомство с языками программирования С#\\codes\\TEST Kontur\\TEST Kontur.csproj": {}
+    "D:\\Users\\Vladimir\\Desktop\\123\\TEST Kontur\\TEST Kontur.csproj": {}
   },
   "projects": {
-    "E:\\УЧЕБА\\Разработчик Основной блок\\4 Знакомство с языками программирования С#\\codes\\TEST Kontur\\TEST Kontur.csproj": {
+    "D:\\Users\\Vladimir\\Desktop\\123\\TEST Kontur\\TEST Kontur.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\УЧЕБА\\Разработчик Основной блок\\4 Знакомство с языками программирования С#\\codes\\TEST Kontur\\TEST Kontur.csproj",
+        "projectUniqueName": "D:\\Users\\Vladimir\\Desktop\\123\\TEST Kontur\\TEST Kontur.csproj",
         "projectName": "TEST Kontur",
-        "projectPath": "E:\\УЧЕБА\\Разработчик Основной блок\\4 Знакомство с языками программирования С#\\codes\\TEST Kontur\\TEST Kontur.csproj",
+        "projectPath": "D:\\Users\\Vladimir\\Desktop\\123\\TEST Kontur\\TEST Kontur.csproj",
         "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-        "outputPath": "E:\\УЧЕБА\\Разработчик Основной блок\\4 Знакомство с языками программирования С#\\codes\\TEST Kontur\\obj\\",
+        "outputPath": "D:\\Users\\Vladimir\\Desktop\\123\\TEST Kontur\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config"

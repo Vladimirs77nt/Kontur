@@ -28,3 +28,18 @@ E:\УЧЕБА\Разработчик Основной блок\4 Знакомс�
 E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\bin\Debug\net7.0\TEST Kontur.pdb
 E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\TEST Kontur.genruntimeconfig.cache
 E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\ref\TEST Kontur.dll
+D:\Users\Vladimir\Desktop\123\TEST Kontur\bin\Debug\net7.0\TEST Kontur.exe
+D:\Users\Vladimir\Desktop\123\TEST Kontur\bin\Debug\net7.0\TEST Kontur.deps.json
+D:\Users\Vladimir\Desktop\123\TEST Kontur\bin\Debug\net7.0\TEST Kontur.runtimeconfig.json
+D:\Users\Vladimir\Desktop\123\TEST Kontur\bin\Debug\net7.0\TEST Kontur.dll
+D:\Users\Vladimir\Desktop\123\TEST Kontur\bin\Debug\net7.0\TEST Kontur.pdb
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\TEST Kontur.csproj.AssemblyReference.cache
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\TEST Kontur.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\TEST Kontur.AssemblyInfoInputs.cache
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\TEST Kontur.AssemblyInfo.cs
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\TEST Kontur.csproj.CoreCompileInputs.cache
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\TEST Kontur.dll
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\refint\TEST Kontur.dll
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\TEST Kontur.pdb
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\TEST Kontur.genruntimeconfig.cache
+D:\Users\Vladimir\Desktop\123\TEST Kontur\obj\Debug\net7.0\ref\TEST Kontur.dll

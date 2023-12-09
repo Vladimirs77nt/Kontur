@@ -8,33 +8,36 @@
 //      То первый игрок должен сказать: «Один бык и одна корова» (1б,1к)
 
 
-
 //-------------------------------------------------------------
+
+int DIGITS_NUMBERS = 4; // кол-во цифр в числе
+double NUMBERS_MIN = Math.Pow(10, (DIGITS_NUMBERS-1));  // минимальное число
+double NUMBERS_MAX = Math.Pow(10, DIGITS_NUMBERS)-1;    // минимальное число
+
 // Функция "корова/бык" - проверяет:
 //  1) есть ли цифры из первого числа во втором числе (корова)
 //  2) eсть ли цифры из первого числа в отгадываемом числе и стоят ли в том же месте (бык),
 // number - проверяемое число
 // numberHidden - загаданное число
-using Microsoft.VisualBasic;
-
 Tuple<int, int> CheckDigitСowBull(int number, int numberHidden)
 {
-    int cow = 0;
-    int bull = 0;
+    int cow = 0;    // коровы
+    int bull = 0;   // быки
     // сравниваем все цифры числа первого числа со вторым
     // слева направо в двух вложенных циклах
+    // сравниваю цифры в текстовом представвлении
     string numberString = number.ToString();
     string numberHiddenString = numberHidden.ToString();
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < DIGITS_NUMBERS; i++)
     {
         char num1 = numberString[i];
-        for (int j = 0; j < 4; j++)
+        for (int j = 0; j < DIGITS_NUMBERS; j++)
         {
             char num2 = numberHiddenString[j];
-            if (num1 == num2)
+            if (num1 == num2)   // если цифры совпали
             {
                 cow += 1;
-                if (i == j)
+                if (i == j)     // если цифры совпали и стоят на тех-же местах
                 {
                     bull += 1;
                 }
@@ -48,21 +51,13 @@ Tuple<int, int> CheckDigitСowBull(int number, int numberHidden)
 // true - если цифры различные, false - если нет
 bool CheckDiffDigitInNumber(int number)
 {    
-    // считаем разрядность числа
-    int count = 0;
-    int temp_number = number;
-    while (temp_number >= 1)
-    {
-        count+= 1;
-        temp_number /=10;
-    }
     // сравниваем все цифры числа друг с другом
     // слева направо в двух вложенных циклах
     string numberString = number.ToString();
-    for (int i = 0; i < count - 1; i++)
+    for (int i = 0; i < DIGITS_NUMBERS-1; i++)
     {
         char num1 = numberString[i];
-        for (int j = i + 1; j < count; j++)
+        for (int j = i + 1; j < DIGITS_NUMBERS; j++)
         {
             char num2 = numberString[j];
             if (num1 == num2) return false;
@@ -83,34 +78,37 @@ int InterfaceGame ()
             string? number_text = Console.ReadLine();
             if (number_text == "0")
                 return 0; // 0 - завершение игры
+
+            // проверка введенного значения на число
             bool success = int.TryParse(number_text, out number);
 
             // проверка на корректность введенных данных
-            if (success)
+            if (success)    // если введеное значение - это число, то проверяем остальные условия
             {
-                if (number < 0)
+                if (number < 0) // если число отрицательное
                 {
                     System.Console.WriteLine(" >> Некорректный запрос! Введено отрицательное число!");
                 }
-                else if (number < 1000 | number >9999)
+                else if (number < NUMBERS_MIN | number > NUMBERS_MAX)   // если число не входит в диапазон
                 {
                     System.Console.WriteLine(" >> Некорректный запрос! Введено не четырхзначное число!");
                 }
-                else if (!CheckDiffDigitInNumber(number))
+                else if (!CheckDiffDigitInNumber(number))  // если введенное число содержит одинаковые цифры
                 {
                     System.Console.WriteLine(" >> Некорректный запрос! Введено число c одинаковыми цифрами!");
                 }
-                else
+                else // возвращаем введенное число, т.е. все норм!
                 {
                     return number;
                 }
             }
-            else
+            else // введенное значение - не число, т.к. содержит другие симоволы кроме цифр
                 Console.WriteLine(" >> Некорректный запрос! присутствуют симоволы отличные от цифр");
         }
     }
 }
 
+// печать архивной записи в терминале
 void PrintRecord (Dictionary<int, Tuple<int, string>> record)
 {
     System.Console.WriteLine();
@@ -130,7 +128,7 @@ System.Console.WriteLine("Игра <<Быки и коровы>>");
 int number_hidden;
 while (true)
 {
-    number_hidden = new Random().Next(1000, 10000);
+    number_hidden = new Random().Next((int)NUMBERS_MIN, (int)(NUMBERS_MAX)+1);
     if (CheckDiffDigitInNumber (number_hidden)) break;
 }
 System.Console.WriteLine("Загадано число от 1000 до 9999. Попробуй угадать его!");
