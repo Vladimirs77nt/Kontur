@@ -1,0 +1,30 @@
+C:\Users\svs\Desktop\codes C#\TEST Kontur\bin\Debug\net7.0\TEST Kontur.exe
+C:\Users\svs\Desktop\codes C#\TEST Kontur\bin\Debug\net7.0\TEST Kontur.deps.json
+C:\Users\svs\Desktop\codes C#\TEST Kontur\bin\Debug\net7.0\TEST Kontur.runtimeconfig.json
+C:\Users\svs\Desktop\codes C#\TEST Kontur\bin\Debug\net7.0\TEST Kontur.dll
+C:\Users\svs\Desktop\codes C#\TEST Kontur\bin\Debug\net7.0\TEST Kontur.pdb
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\TEST Kontur.csproj.AssemblyReference.cache
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\TEST Kontur.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\TEST Kontur.AssemblyInfoInputs.cache
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\TEST Kontur.AssemblyInfo.cs
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\TEST Kontur.csproj.CoreCompileInputs.cache
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\TEST Kontur.dll
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\refint\TEST Kontur.dll
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\TEST Kontur.pdb
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\TEST Kontur.genruntimeconfig.cache
+C:\Users\svs\Desktop\codes C#\TEST Kontur\obj\Debug\net7.0\ref\TEST Kontur.dll
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\TEST Kontur.csproj.AssemblyReference.cache
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\TEST Kontur.GeneratedMSBuildEditorConfig.editorconfig
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\TEST Kontur.AssemblyInfoInputs.cache
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\TEST Kontur.AssemblyInfo.cs
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\TEST Kontur.csproj.CoreCompileInputs.cache
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\TEST Kontur.dll
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\refint\TEST Kontur.dll
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\TEST Kontur.pdb
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\bin\Debug\net7.0\TEST Kontur.exe
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\bin\Debug\net7.0\TEST Kontur.deps.json
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\bin\Debug\net7.0\TEST Kontur.runtimeconfig.json
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\bin\Debug\net7.0\TEST Kontur.dll
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\bin\Debug\net7.0\TEST Kontur.pdb
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\TEST Kontur.genruntimeconfig.cache
+E:\УЧЕБА\Разработчик Основной блок\4 Знакомство с языками программирования С#\codes\TEST Kontur\obj\Debug\net7.0\ref\TEST Kontur.dll

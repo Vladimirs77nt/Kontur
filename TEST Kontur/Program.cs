@@ -1,0 +1,165 @@
+﻿// Ходы делаются по очереди.
+// В каждый ход называется число, тоже четырехзначное и с разными цифрами.
+// Если цифра из названного числа есть в отгадываемом числе,
+//      то эта ситуация называется «корова».
+// Если цифра из названного числа есть в отгадываемом числе и стоит в том же месте,
+//      то эта ситуация называется «бык». 
+// Например, первый игрок задумал 8569, а второй игрок назвал 8974
+//      То первый игрок должен сказать: «Один бык и одна корова» (1б,1к)
+
+
+
+//-------------------------------------------------------------
+// Функция "корова/бык" - проверяет:
+//  1) есть ли цифры из первого числа во втором числе (корова)
+//  2) eсть ли цифры из первого числа в отгадываемом числе и стоят ли в том же месте (бык),
+// number - проверяемое число
+// numberHidden - загаданное число
+using Microsoft.VisualBasic;
+
+Tuple<int, int> CheckDigitСowBull(int number, int numberHidden)
+{
+    int cow = 0;
+    int bull = 0;
+    // сравниваем все цифры числа первого числа со вторым
+    // слева направо в двух вложенных циклах
+    string numberString = number.ToString();
+    string numberHiddenString = numberHidden.ToString();
+    for (int i = 0; i < 4; i++)
+    {
+        char num1 = numberString[i];
+        for (int j = 0; j < 4; j++)
+        {
+            char num2 = numberHiddenString[j];
+            if (num1 == num2)
+            {
+                cow += 1;
+                if (i == j)
+                {
+                    bull += 1;
+                }
+            }
+        }
+    }
+    return Tuple.Create(cow, bull);
+}
+
+// Функция проверки числа "number" на различие всех цифр
+// true - если цифры различные, false - если нет
+bool CheckDiffDigitInNumber(int number)
+{    
+    // считаем разрядность числа
+    int count = 0;
+    int temp_number = number;
+    while (temp_number >= 1)
+    {
+        count+= 1;
+        temp_number /=10;
+    }
+    // сравниваем все цифры числа друг с другом
+    // слева направо в двух вложенных циклах
+    string numberString = number.ToString();
+    for (int i = 0; i < count - 1; i++)
+    {
+        char num1 = numberString[i];
+        for (int j = i + 1; j < count; j++)
+        {
+            char num2 = numberString[j];
+            if (num1 == num2) return false;
+        }
+    }
+    return true;
+}
+
+// Интерфейс ввода с терминала с проверкой на валидность,
+// возвращает число удовлетворяющее правилам игры (0 - выход)
+int InterfaceGame ()
+{
+    int number;
+    while (true)
+    {
+        {
+            System.Console.Write("Введите положительное четырехзначное число с разными цифрами (0 - выход): ");
+            string? number_text = Console.ReadLine();
+            if (number_text == "0")
+                return 0; // 0 - завершение игры
+            bool success = int.TryParse(number_text, out number);
+
+            // проверка на корректность введенных данных
+            if (success)
+            {
+                if (number < 0)
+                {
+                    System.Console.WriteLine(" >> Некорректный запрос! Введено отрицательное число!");
+                }
+                else if (number < 1000 | number >9999)
+                {
+                    System.Console.WriteLine(" >> Некорректный запрос! Введено не четырхзначное число!");
+                }
+                else if (!CheckDiffDigitInNumber(number))
+                {
+                    System.Console.WriteLine(" >> Некорректный запрос! Введено число c одинаковыми цифрами!");
+                }
+                else
+                {
+                    return number;
+                }
+            }
+            else
+                Console.WriteLine(" >> Некорректный запрос! присутствуют симоволы отличные от цифр");
+        }
+    }
+}
+
+void PrintRecord (Dictionary<int, Tuple<int, string>> record)
+{
+    System.Console.WriteLine();
+    foreach(var pair in record)
+    {
+        var (number, result) = pair.Value;
+        Console.WriteLine($"{pair.Key}: {number} -> {result}");
+    }
+    System.Console.WriteLine();
+}
+
+
+//---------------- БЛОК ПРОГРАММЫ -------------------
+System.Console.WriteLine("Игра <<Быки и коровы>>");
+
+// 1. Загадываем число, удовлетворяющее требованию (четырехзначное, положительное, разные цифры)
+int number_hidden;
+while (true)
+{
+    number_hidden = new Random().Next(1000, 10000);
+    if (CheckDiffDigitInNumber (number_hidden)) break;
+}
+System.Console.WriteLine("Загадано число от 1000 до 9999. Попробуй угадать его!");
+// Console.WriteLine($" >>> загаданное число = {number_hidden}");
+
+
+// 2. Инициализируем словарь для записи истории
+var record_game  = new Dictionary<int, Tuple<int, string>>(); // архив-запись вводимых чисел и результатов, под индексом 0 - загаданное число
+int count = 1; // счетчик попыток
+
+// 3. Запуск бесконечного цикла ввода с терминала
+while (true)
+{
+    PrintRecord (record_game);
+    System.Console.WriteLine($"Попытка: {count}");
+    int number_try = InterfaceGame (); // получаем число из интерфейса
+    if (number_hidden == number_try)   // угадали?
+    {
+        System.Console.WriteLine($"Число угадано! (за {count} попыток)\n");
+        break;
+    }
+    if (number_try == 0)               // 0 - завершение игры
+    {
+        System.Console.WriteLine(" -- остановка игры --");
+        break;
+    }
+    var (cow, bull) = CheckDigitСowBull (number_try, number_hidden); // проверяем на "коровы" и "быки"
+    string str_cow_bull = $"{bull} бык., {cow} коров.";              // формируем строковое представление результата
+    System.Console.WriteLine(str_cow_bull);
+    record_game.Add (count, Tuple.Create(number_try, str_cow_bull)); // записываем результат в архив
+    count += 1;
+}
